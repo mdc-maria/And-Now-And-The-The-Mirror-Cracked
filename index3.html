@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>MDC 22-23</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <!--menu bar-->
+   <body>
+      <div class="sidebarAbout">
+         <div class="menu">
+            <p id="menu-button" class="name" href="#">And (now and then) the mirror cracked</p>
+            <a href="index2.html">
+               <p id="menu-button" class="button">Sobre</p>
+            </a>
+            <a href="index3.html">
+               <p id="menu-button" class="button" href="#">Publicação</p>
+            </a>
+         </div>
+      </div>
+      </div>
+      <div id="about-page" style="margin-bottom: 0;">
+         <div id="left">
+            <div id="infos" style="padding-left: 20px;">
+               <a href="index.html"><button>X</button></a>
+               <h3 style="text-align: center;" class="title">And<br><span class="Romie">(Now and Then)</span><br>The Mirror <br>Cracked</h3>
+               <p class="sub-about">Modos de (re)ver o design, a ficção e o cinema através da lente do feminino</p>
+               <p class="content indent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. </p>
+               <p class="content indent">Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. </p>
+               <p class="content indent"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+               <p class="credits">FBAUL . Licenciatura em Design de Comunicação<br>3.º ano . Design de Comunicação V e VI<br>2021/22</p>
+            </div>
+         </div>
+         <div id="right">
+            <div class="slideshow">
+               <div class="mySlides2" style="display:block">
+                  <div class="numbertext"></div>
+                  <img src="IMG/Lepo/passing-1.png" style="width:100%"">
+               </div>
+               <div class="mySlides2">
+                  <div class="numbertext"></div>
+                  <img src="IMG/Lepo/passing-2.png" style="width:100%">
+               </div>
+               <a class=prev onclick="plusSlides(-1,1)">←</a><a class=next onclick="plusSlides(1,1)">→</a>
+            </div>
+         </div>
+      </div>
+      </div>
+      <script>
+         let slideIndex = [1,1];
+         let slideId = ["mySlides1", "mySlides2"]
+         showSlides(1, 0);
+         showSlides(1, 1);
+         
+         function plusSlides(n, no) {
+         showSlides(slideIndex[no] += n, no);
+         }
+         
+         function showSlides(n, no) {
+         let i;
+         let x = document.getElementsByClassName(slideId[no]);
+         if (n > x.length) {slideIndex[no] = 1}    
+         if (n < 1) {slideIndex[no] = x.length}
+         for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+         }
+         x[slideIndex[no]-1].style.display = "block";  
+         }
+      </script>
+   </body>
+</html>
